@@ -181,9 +181,10 @@ namespace Xceed.Wpf.Toolkit.Primitives
         IsOpen = false;
       }
 
-      ReleaseMouseCapture();
+      CommitInput();
+      ReleaseMouseCapture();  
 
-      if( isFocusOnTextBox && ( TextBox != null ) )
+      if ( isFocusOnTextBox && ( TextBox != null ) )
         TextBox.Focus();
     }
 
